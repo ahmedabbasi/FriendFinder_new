@@ -20,11 +20,11 @@ $('#submit-btn').on('click', function(e) {
     method: 'POST',
     url: '/api/friends',
     data: newSurvey
-  }).then(function(pickedFriend) {
-    console.log(pickedFriend);
-    if (pickedFriend.found) {
-      $('.match-name').text(pickedFriend.name);
-      $('#match-image').attr('src', pickedFriend.photo);
+  }).then(function(matchedFriend) {
+    console.log(matchedFriend);
+    if (matchedFriend.found) {
+      $('.match-name').text(matchedFriend.name);
+      $('#match-image').attr('src', matchedFriend.photo);
       $('#answer-modal').modal('show');
     }
   });
