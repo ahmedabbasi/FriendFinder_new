@@ -1,0 +1,13 @@
+<div class="row">
+  {{#each friendList}}
+  <div class="col-12 col-md-4" data-id="{{this.id}}">
+    <div class="card">
+      <img class="card-img-top" src="{{this.photo}}" alt="{{this.name}}">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <button class="btn btn-block btn-outline-danger" data-id="{{this.id}}" id="delete-btn">Delete This Friend</button>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
