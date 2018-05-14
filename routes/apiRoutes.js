@@ -48,6 +48,7 @@ module.exports = function (app) {
         db.friends
           .create(newFriend)
           .then(function (data) { 
+            pickedFriend.found = true;
             res.json(pickedFriend);
           })
           .catch(function (err) {
